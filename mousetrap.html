@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Mouse Trap</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<script>
+    var counter = 0;
+    function roll() {
+      var num = Math.random() * 3;
+      
+      
+      if(num < 1.0) {
+        document.body.style.background = "blue";
+      }
+      else if(num < 2.0) {
+        document.body.style.background = "orange";
+      }
+      else {
+        document.body.style.background = "purple";
+      }
+      counter++;
+      document.getElementById("counter").textContent  =  counter;          
+    }
+  </script>
+</head>
+
+<body>
+  <img src="http://www.mousetrapsoftplay.co.uk/wp-content/uploads/2015/11/logo1.png"></image>
+  <button onclick="roll()">Roll</button>
+  <h3 id="counter""></h3>
+  
+</body>
+</html>
